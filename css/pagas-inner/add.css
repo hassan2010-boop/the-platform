@@ -1,0 +1,58 @@
+body {
+  font-family: "Playfair Display", sans-serif;
+  background-color: #1e1e2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #ffcb74;
+  font-family: "Protest Guerrilla", cursive;
+  letter-spacing: 2px;
+}
+
+.form-container {
+  background: #2d2d44;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #8c52ff33;
+  width: 500px;
+  height: auto;
+  transition: 0.3s;
+}
+
+input {
+  width: 94%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #8c52ff;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ffcb74;
+  box-shadow: 0 0 5px #8c52ff99;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background: radial-gradient(circle at center, #8c52ff, #8c52ff99);
+  color: #ffcb74;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 1s;
+}
