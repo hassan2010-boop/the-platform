@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add via Excel</title>
+    <link rel="stylesheet" href="../../css/pagas-inner/excal.css" />
+  </head>
+  <body>
+    <h1>Add via Excel</h1>
+    <p class="description">
+      Use this page to upload an Excel file and add students or participants.
+      Update the operation type and select your Excel file then click OK.
+    </p>
+
+    <select id="questionType">
+      <option value="">Please update operation type</option>
+      <option value="Complete">Add Students</option>
+      <option value="TrueFalse">Add Participants</option>
+    </select>
+
+    <input type="file" id="excelFile" />
+    <label for="excelFile" class="custom-file-upload">Choose Excel File</label>
+    <span id="fileName"></span>
+
+    <div style="margin-top: 20px">
+      <button id="downloadSample">Download Excel Sample</button>
+      <button id="uploadBtn">Save</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="../../js/pagas-inner/excal.js"></script>
+  </body>
+</html>
+

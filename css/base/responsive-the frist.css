@@ -1,0 +1,141 @@
+@media (max-width: 1024px) {
+  .guide-container {
+    max-width: 90%;
+  }
+  .guide-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: none;
+  }
+  .hero-section,
+  .window2 {
+    min-height: auto;
+    padding: 60px 20px;
+    scroll-snap-align: none;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    letter-spacing: 4px;
+  }
+  .img-box {
+    width: 160px;
+    height: 160px;
+  }
+  .quote {
+    font-size: 18px;
+  }
+  .bio {
+    font-size: 15px;
+  }
+  .main-btn {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+
+  .header-guide h2 {
+    font-size: 32px;
+  }
+  .how-to-enter {
+    padding: 20px;
+  }
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .guide-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .guide-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+  }
+  .img-box {
+    width: 130px;
+    height: 130px;
+  }
+  .header-guide h2 {
+    font-size: 26px;
+  }
+  .step-num {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 600px) {
+  .hero-section {
+    padding: 40px 10px;
+  }
+  .img-box {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .guide-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: none;
+  }
+  .hero-section,
+  .window2 {
+    min-height: auto;
+    padding: 60px 20px;
+    scroll-snap-align: none;
+  }
+  .title {
+    font-size: 3.2rem;
+    letter-spacing: 4px;
+  }
+  .img-box {
+    width: 160px;
+    height: 160px;
+  }
+  .quote {
+    font-size: 18px;
+  }
+  .bio {
+    font-size: 15px;
+  }
+  .main-btn {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+  .header-guide h2 {
+    font-size: 32px;
+  }
+  .steps-grid,
+  .guide-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+  }
+  .img-box {
+    width: 130px;
+    height: 130px;
+  }
+}

@@ -1,137 +1,108 @@
-:root {
-  --background-color: #2d2d44;
-  --font-color: #ffcb74;
-  --color: #8c52ff;
-  --background-color2: #1e1e2f;
-  --shadow-color: #00000033;
-  --shadow-color-hover: #00000066;
-}
 .nav .menu {
-  background-color: var(--background-color);
-  width: 90px;
-  height: 100vh;
-  padding: 20px;
-  overflow: hidden;
-  transition: 0.5s;
-  position: fixed;
-  left: 0;
-  z-index: 100;
+    background-color: var(--background-color);
+    width: 80px;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    transition: .5s ;
+    position: fixed;
+    right: 0;
+    z-index:100;
 }
 .nav .menu:hover {
-  width: 250px;
-  background-color: var(--background-color2);
+    width: 250px;
+    background-color:transparent;
 }
 body:has(.menu:hover) .main {
-  filter: blur(7px);
-  pointer-events: none;
+    filter: blur(7px);
+    pointer-events: none;
 }
-
 .nav .logo {
-  width: 70px;
-  height: 70px;
-  border-radius: 10%;
-  background-color: #0c111c;
-  padding: 3px;
-  transition: 1s;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) scale(1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0c111c;
+    padding: 3px;
+    transition: 1s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(1); 
 }
 .nav .menu:hover .logo {
-  transform: translateX(-50%) scale(1.3);
+    transform: translateX(-50%) scale(1.5); 
 }
-.nav i {
-  font-size: 25px;
-  color: var(--font-color);
-  width: 30px;
-  transition: 0.3s ease;
+.nav img {
+    width: 30px;
+    transition: 0.3s ease;
 }
-
 .nav .list {
-  list-style: none;
-  position: relative;
-  height: 90%;
-  margin-top: 120px;
+    list-style: none;
+    position: relative;
+    height: 95%;
 }
-
-.nav .list li {
-  width: 100%;
-}
-
 .nav .list li a {
-  display: flex;
-  gap: 15px;
-  padding: 10px;
-  margin: 20px 0;
-  border-radius: 500px;
-  text-decoration: none;
-  transition: 0.5s;
-  text-transform: capitalize;
-  font-weight: 700;
-  flex-direction: row;
+    display: flex;
+    gap: 25px;
+    padding: 5px;
+    margin: 7px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.5s;
+    text-transform:capitalize;
+    font-weight: 900;
+    letter-spacing: 3px;
+    flex-direction: row-reverse;
 }
-
-.nav .list li a p {
-  color: var(--font-color);
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 20px;
-  opacity: 0;
-  white-space: nowrap;
-  transition: 0.3s;
+.nav .list li a p{
+    color: var(--font-color);
+    font-family: monospace;
+    font-size: 25px;
 }
-
-.nav .menu:hover .list li a p {
-  opacity: 1;
+.nav .list li::after{
+    content: "";
+    background-color: #ffcb74;
+    display: flex;end
+    justify-content: flex-start;
+    width: 0px;
+    height: 5px;
+    border-radius: 15px;
 }
-.nav .list li::after :not(.log-out) {
-  content: "";
-  background-color: var(--font-color);
-  display: block;
-  width: 0px;
-  height: 3px;
-  border-radius: 0px;
-  transition: 1s;
+.nav .list li:hover::after{
+    animation-name: width;
+    animation-duration: 1.5s; 
+    animation-fill-mode:forwards;
 }
-
-.nav .list li:hover::after {
-  width: 100%;
+.nav .list li a:hover{
+    background-color: #3e3e5e83;
 }
-
-.nav .list li a:hover {
-  background-color: #3e3e5e83;
+@keyframes width {
+    to{
+        width: 100%;
+    }
 }
-
 .nav .list .actav {
-  background-color: var(--color);
+    pointer-events: none;
+    background-color: var(--color);
 }
 .nav .log-out {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  left: 0;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
 }
-.nav .list .log-out i {
-  color: #ffcb74;
-  font-size: 25px;
-  width: 30px;
+.nav .list .log-out a{
+    display: flex;
+    background-color: #ff0000;
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 10px;
 }
-.nav .list .log-out a {
-  background-color: transparent;
-  color: #ff3e3e;
-  border: 2px solid #ff3e3e;
-  border-radius: 500px;
-  font-weight: bold;
-  box-shadow: inset 0px 0px 5px #ff3e3e;
-  transition: 0.5s;
+.nav .list .log-out a:hover{
+    background-color: #c80000;
 }
-
-.nav .list .log-out a:hover {
-  background-color: #ff3e3e;
-  color: #fff;
-  box-shadow: 0px 0px 20px #ff3e3e;
-}
-.nav .list .log-out a p {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 900;
+.nav .list .log-out a p{
+    color: #fff;
+    font-family: monospace;
+    font-size: 25px;
+    text-transform:uppercase;
+    font-weight: 900;
 }

@@ -1,19 +1,22 @@
-/* Selection Styles */
-*::selection {
-  background-color: #8c52ff;
-  color: #ffcb74;
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+
 }
-::-webkit-scrollbar {
-  width: 5px;
-  background: linear-gradient(#8c52ff, #5500ff);
-  border-radius: 0px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-::-webkit-scrollbar-thumb {
-  background: #ffcb74;
-  border-radius: 0px;
-}
-::-webkit-scrollbar-track {
-  border-radius: 0px;
+
+body {
+  background-color: #0b0b12;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+
 }
 .loader-wrapper {
   position: fixed;

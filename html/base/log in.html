@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Access Portal</title>
+    <link rel="stylesheet" href="../../css/log in.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <form onsubmit="return false;">
+      <h1>LOGIN</h1>
+
+      <div class="input-group">
+        <label>Username</label>
+        <div class="field">
+          <i class="fas fa-user"></i>
+          <input id="t1" placeholder="Enter your name" type="text" required />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <div class="field">
+          <i class="fas fa-lock"></i>
+          <input
+            id="t2"
+            placeholder="Enter password"
+            type="password"
+            required
+          />
+        </div>
+      </div>
+
+      <a
+        class="submit"
+        id="sumbit"
+        onclick="onclick1()"
+        href="../imprtant-pages/admin/home.html"
+        >OPEN SYSTEM</a
+      >
+
+      <div class="infor">
+        <div class="hint">
+          <span>User:</span>
+          <b>hassan</b>
+        </div>
+        <div class="hint">
+          <span>Pass:</span>
+          <b>123456</b>
+        </div>
+      </div>
+
+      <div class="by">
+        <p>Created by Hassan Emad</p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/profile.php?id=61560845742059"
+            class="facebook"
+          >
+            <img
+              src="https://img.icons8.com/color/96/facebook-new.png"
+              alt="Facebook"
+            />
+          </a>
+          <a href="https://www.instagram.com/skrhsnmd/" class="instagram">
+            <img
+              src="https://img.icons8.com/color/94/instagram-new.png"
+              alt="Instagram"
+            />
+          </a>
+          <a href="https://wa.me/201208331466" class="whatsapp">
+            <img
+              src="https://img.icons8.com/color/96/whatsapp.png"
+              alt="WhatsApp"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div id="h2" class="error-message">Incorrect username or password</div>
+    </form>
+
+    <script src="../js/log in.js"></script>
+    <script>
+      const submitBtn = document.querySelector(".submit");
+
+      submitBtn.addEventListener("mousemove", (e) => {
+        const rect = submitBtn.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        submitBtn.style.background = `radial-gradient(circle at ${x}px ${y}px, #8c52ff, #5227ff)`;
+      });
+
+      submitBtn.addEventListener("mouseleave", () => {
+        submitBtn.style.background = "linear-gradient(45deg, #8c52ff, #5227ff)";
+      });
+    </script>
+  </body>
+</html>

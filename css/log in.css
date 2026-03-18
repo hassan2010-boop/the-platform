@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #0b0b12;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+form {
+  background: #161625;
+  width: 100%;
+  max-width: 450px;
+  padding: 50px 40px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: fadeIn 0.8s ease-out;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  background: linear-gradient(to right, #ffcb74, #8c52ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 35px;
+  font-weight: 900;
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffcb74;
+  margin-bottom: 8px;
+  margin-right: 5px;
+}
+
+.field {
+  position: relative;
+  width: 100%;
+}
+
+.field i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: rgba(140, 82, 255, 0.6);
+  transition: 0.3s;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: none;
+  width: 100%;
+  padding: 15px 45px 15px 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  border-bottom: 2px solid rgba(140, 82, 255, 0.1);
+  outline: none;
+  color: white;
+
+  transition: all 0.4s ease;
+}
+
+input:focus {
+  background-color: rgba(140, 82, 255, 0.08);
+  border-bottom: 2px solid #8c52ff;
+}
+
+input:focus + i {
+  color: #ffcb74;
+}
+
+.submit {
+  background: linear-gradient(45deg, #8c52ff, #5227ff);
+  width: 100%;
+  height: 60px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 20px rgba(140, 82, 255, 0.2);
+}
+
+.submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(140, 82, 255, 0.4);
+  letter-spacing: 5px;
+}
+
+.infor {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 15px;
+  border-righius: 12px;
+  border-left: 4px solid #ffcb74;
+}
+
+.hint {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.hint span {
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+.hint b {
+  color: #ffcb74;
+  font-weight: 700;
+}
+
+.by {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.by p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icons a img {
+  width: 35px;
+  transition: 0.4s;
+  filter: grayscale(0.5) brightness(0.8);
+}
+
+.social-icons a:hover img {
+  filter: grayscale(0) brightness(1.2);
+  transform: scale(1.2) rotate(8deg);
+}
+
+#h2 {
+  display: none;
+  background: #ff4d4d;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+}
+
+.error-message {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+*::selection {
+  background-color: #8c52ff;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #0b0b12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8c52ff;
+  border-radius: 10px;
+}
