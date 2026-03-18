@@ -1,61 +1,66 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intelearn | Admin Dashboard</title>
+
     <link rel="stylesheet" href="../../../css/imprtant-pages/admin/home.css" />
     <link rel="stylesheet" href="../../../css/base/global.css" />
     <link rel="stylesheet" href="../../../css/base/navBar.css" />
-    <link rel="stylesheet" href="../../../css/base/responsive-the frist.css" />
+    <link
+      rel="stylesheet"
+      href="../../../css/base/responsive/navbar-resp.css"
+    />
+    <link rel="stylesheet" href="../../../css/base/responsive/home-resp.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Idiqlat:wght@200;300;400&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <title>Interlearn</title>
-    <link rel="icon" href="../../../img/logo.ico" />
+    <link rel="icon" href="../../../img/logo.jpg" />
   </head>
   <body>
     <nav class="nav">
       <div class="menu">
-        <img class="logo" src="../../../img/logo.ico" />
-        <br /><br /><br />
+        <img class="logo" src="../../../img/logo.jpg" />
         <div class="list">
-          <br /><br /><br />
           <li>
-            <a href="home.html" class="actav" data-tooltip="Home"
-              ><img src="../../../img/home.png" />
-              <p>Home</p></a
-            >
+            <a class="actav" data-tooltip="Home">
+              <i class="fas fa-home"></i>
+              <p>Home</p>
+            </a>
           </li>
           <li>
-            <a href="Pluralism-Subscribe.html" data-tooltip="Subscriptions"
-              ><img src="../../../img/subscription.png" />
-              <p>Subscriptions</p></a
-            >
+            <a href="Pluralism-Subscribe.html" data-tooltip="Subscriptions">
+              <i class="fas fa-user-check"></i>
+              <p>Subscriptions</p>
+            </a>
           </li>
           <li>
-            <a href="Pluralism-texts.html" data-tooltip="Tests"
-              ><img src="../../../img/tests.png" />
-              <p>Tests</p></a
-            >
+            <a href="Pluralism-texts.html" data-tooltip="Tests">
+              <i class="fas fa-file-alt"></i>
+              <p>Tests</p>
+            </a>
           </li>
           <li>
-            <a href="Pluralism-grades.html" data-tooltip="Grades"
-              ><img src="../../../img/grades.png" />
-              <p>Grades</p></a
-            >
+            <a href="Pluralism-grades.html" data-tooltip="Grades">
+              <i class="fas fa-graduation-cap"></i>
+              <p>Grades</p>
+            </a>
           </li>
           <li>
-            <a href="Pluralism-photos.html" data-tooltip="Photos"
-              ><img src="../../../img/photo.png" />
-              <p>Photos</p></a
-            >
+            <a href="Pluralism-photos.html" data-tooltip="Photos">
+              <i class="fas fa-images"></i>
+              <p>Photos</p>
+            </a>
           </li>
           <li class="log-out">
-            <a href="../base/log in.html" data-tooltip="Log Out"
-              ><img src="../../../img/log out.png" />
-              <p>Log Out</p></a
-            >
+            <a href="../base/log in.html" data-tooltip="Log Out">
+              <i class="fas fa-sign-out-alt"></i>
+              <p>Log Out</p>
+            </a>
           </li>
         </div>
       </div>
@@ -64,54 +69,74 @@
     <div class="main">
       <div class="counterToLoading">
         <div class="title">
-          <span class="l">i</span>
-          <span class="o">n</span>
-          <span class="a">t</span>
-          <span class="d">e</span>
-          <span class="n">l</span>
-          <span class="g">e</span>
-          <span class="one">a</span>
-          <span class="two">e</span>
+          <span class="i">i</span>
+          <span class="x">n</span>
+          <span class="t">t</span>
           <span class="e">e</span>
+          <span class="l">l</span>
+          <span class="e">e</span>
+          <span class="a">a</span>
           <span class="r">r</span>
+          <span class="n">n</span>
         </div>
       </div>
-      <div class="container">
-        <div class="box">
-          <div class="face front">Welcome <span>,...........</span></div>
-          <div class="face back" id="span"></div>
+      <div class="stats-container">
+        <div class="stat-card">
+          <i class="fas fa-users"></i>
+          <div class="info">
+            <h3>Students</h3>
+            <p><span id="students-count">0</span></p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-file-signature"></i>
+          <div class="info">
+            <h3>Total Tests</h3>
+            <p><span id="tests-count">0</span></p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-images"></i>
+          <div class="info">
+            <h3>Photos</h3>
+            <p><span id="photos-count">0</span></p>
+          </div>
         </div>
       </div>
 
       <div class="bio-box">
-        <pre class="bio-text">
-                <b>Created by Hassan Emad Askar</b>
-        I am a software developer
-        My languages: html, css, javascript, php
-        Tel: 01207657906
-        Tel: 01272687352
-            </pre>
+        <div class="bio-header">
+          <div class="bio-info">
+            <b>Hassan Abdelrahman Mohamed</b>
+            <p class="job-title">
+              <i class="fas fa-laptop-code"></i> Software Developer
+            </p>
+          </div>
+        </div>
+
+        <div class="bio-details">
+          <div class="detail-item">
+            <i class="fas fa-layer-group"></i>
+            <span
+              >Tech Stack: <span class="highlight">HTML, CSS, JS</span></span
+            >
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>01037056371 / 01207657906</span>
+          </div>
+        </div>
+
+        <div class="bio-status">
+          <span class="status-dot"></span> Available for Work
+        </div>
       </div>
-      <!-- نهاية قسم البيانات الشخصية -->
 
       <div class="clock-container" id="clock-box">
-        <div id="clock"></div>
+        <div id="clock">00:00:00</div>
       </div>
     </div>
 
-    <script>
-      function updateClockAndDate() {
-        const now = new Date();
-        const hours = String(now.getHours()).padStart(2, "0");
-        const minutes = String(now.getMinutes()).padStart(2, "0");
-        const seconds = String(now.getSeconds()).padStart(2, "0");
-        document.getElementById("clock").textContent =
-          `${hours}:${minutes}:${seconds}`;
-      }
-
-      setInterval(updateClockAndDate, 1000);
-      updateClockAndDate();
-    </script>
     <script src="../../../js/imprtant-pages/admin/home.js"></script>
   </body>
 </html>
