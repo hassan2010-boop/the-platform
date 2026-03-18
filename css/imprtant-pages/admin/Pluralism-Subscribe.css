@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", sans-serif;
+
+}
+:root {
+  --background-color: #2d2d44;
+  --font-color: #ffcb74;
+  --color: #8c52ff;
+  --background-color2: #1e1e2f;
+  --shadow-color: #00000033;
+  --shadow-color-hover: #00000066;
+}
+body {
+  background: linear-gradient(180deg, #1e1e2f 70%, #2a2a41);
+  color: white;
+  display: flex;
+  height: 100vh;
+  background-attachment: fixed;
+  position: relative;
+  animation-name: all;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes all {
+  to {
+    opacity: 1;
+  }
+}
+.main {
+  width: 80%;
+  margin: 0 auto;
+  transition: filter 0.5s ease;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: #353552;
+  font-size: 70px;
+  letter-spacing: 10px;
+  font-weight: 900;
+  font-family: "Idiqlat", serif;
+}
+.title span {
+  animation-name: load;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  margin-top: 35px;
+  text-transform: uppercase;
+  border-radius: 20%;
+  padding: 5px;
+  margin: 0 3px;
+  text-align: center;
+  font-family: "Idiqlat", serif;
+}
+.title .l {
+  animation-delay: 0.1s;
+}
+.title .o {
+  animation-delay: 0.15s;
+}
+.title .a {
+  animation-delay: 0.2s;
+}
+.title .d {
+  animation-delay: 0.25s;
+}
+.title .i {
+  animation-delay: 0.3s;
+}
+.title .n {
+  animation-delay: 0.35s;
+}
+.title .g {
+  animation-delay: 0.4s;
+}
+.title .one {
+  animation-delay: 0.45s;
+}
+.title .two {
+  animation-delay: 0.5s;
+}
+
+@keyframes load {
+  to {
+    color: #ffd183;
+  }
+}
+.main .head {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 0px;
+  color: #ffcb74;
+  font-family: monospace;
+}
+.container {
+  margin: 20px auto;
+  width: 300px;
+  perspective: 800px;
+}
+.box {
+  position: relative;
+  width: 300px;
+  height: 120px;
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+.box-left {
+  transform-origin: left center;
+}
+.box-center {
+  transform-origin: center center;
+}
+.box-right {
+  transform-origin: right center;
+}
+.box-right:hover {
+  transform: translate(-100%) rotateY(-180deg);
+}
+.box-center:hover {
+  transform: rotateY(-180deg);
+}
+.box-left:hover {
+  transform: translate(100%) rotateY(180deg);
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 30px;
+  color: white;
+  backface-visibility: hidden;
+  border: 1px solid #2d2d47;
+  transition: 1s;
+}
+
+.front {
+  background: linear-gradient(145deg, #2d2d44, #1e1e2f);
+  border-radius: 2px;
+  text-align: center;
+}
+.back {
+  background: linear-gradient(145deg, #2d2d44, #1e1e2f);
+  border-radius: 2px;
+  text-align: center;
+  transform: rotateY(-180deg);
+}
+.back,
+.front:hover {
+  border: 3px solid #9966ff;
+}
+.back p {
+  font-size: 50px;
+  color: #ffcb74;
+}
+.front h3 {
+  font-size: 25px;
+  color: #ffcb74;
+  letter-spacing: 3px;
+}
+
+.main .secondary {
+  background: #8c52ff;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 16px;
+  border: 2px solid #3e3e5e;
+}
+.main h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2d2d44;
+  padding: 5px;
+  margin: 15px 0;
+  border-radius: 8px;
+  color: #ffcb74;
+  font-size: 20px;
+  border-left: 3px solid var(--font-color);
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+.main table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: center;
+  background-color: #2d2d44;
+  overflow: hidden;
+}
+.main th,
+.main td {
+  padding: 5px;
+  border: 1px solid #3c3c5e;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.id {
+  width: 10%;
+}
+.Group {
+  width: 60%;
+}
+.removal {
+  width: 25%;
+}
+.main th {
+  background-color: #8c52ff;
+  color: #0c111c;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+.main td {
+  color: #ffcb74;
+}
+.main tr:hover td {
+  background-color: #3e3e5e;
+}
+.main .button,
+.main button,
+.group-button {
+  background-color: transparent;
+  border: none;
+  color: #ffcb74;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.group-button:hover {
+  transform: scale(1.2);
+}
